@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-gold-light: #FFF099;
+  --color-gold: #FFD700;
+  --color-gold-dark: #ccab00;
+  --color-gold-deep: #FFA500;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0b0b0b;
+  color: #f3f4f6;
+  direction: rtl;
+}
+
+/* Custom scrollbar styling to fit the gourmet high-end look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA500;
+}

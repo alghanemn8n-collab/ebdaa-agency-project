@@ -35,6 +35,7 @@ import {
 } from 'lucide-react';
 import { menuData, offersData, MenuItem, CATEGORIES } from './data';
 import AdminPanel from './components/AdminPanel';
+import AdminPage from './admin'; // استيراد صفحة الإدارة الجديدة
 
 interface CartItem extends MenuItem {
   quantity: number;
@@ -57,7 +58,10 @@ const IMAGE_PRESETS = [
   { name: 'استراتيجيات', url: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=600' },
 ];
 
-export default function App() {
+export default function App() {// التحقق من الرابط لعرض صفحة الإدارة
+  if (window.location.pathname === '/admin') {
+    return <AdminPage />;
+  }
   // Configurable WhatsApp numbers provided in original project
   const WHATSAPP_ORDER = '00963980653019';
   const WHATSAPP_INQUIRY = '00963980653019';
